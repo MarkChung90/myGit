@@ -12,9 +12,10 @@ public class HelloDemo {
 
 	}
 
-	private static void sayHello() {
+	private static int sayHello() {
 		// TODO Auto-generated method stub
 		System.out.println("Hello myJava GitHub!");
+		return 0;
 	}
 
 }
