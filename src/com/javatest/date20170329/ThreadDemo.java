@@ -4,12 +4,45 @@ import java.io.IOException;
 
 public class ThreadDemo {
 	public static void main(String[] args) {
-		try {
+/*		try {
 			RuntimeDemo();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		*/
+		extendsDemo();
+		
+	}
+	
+	static class Person extends Thread{
+		private int nums = 50;
+		
+		public Person(String name) {
+			// TODO Auto-generated constructor stub
+			super(name);
+		}
+		
+		@Override
+		public void run() {
+			// TODO Auto-generated method stub
+			for (int i = 0; i < nums; i++) {
+				if(nums > 0){					
+					System.out.println(super.getName()+"吃了编号为："+ nums-- +"的苹果");
+				}
+			}
+		}
+	}
+
+	private static void extendsDemo() {
+		// TODO Auto-generated method stub
+		//创建三个线程（同学）、吃苹果
+		
+		
+		new Person("小A").start();
+		new Person("小B").start();
+		new Person("小C").start();
+		
 		
 	}
 
